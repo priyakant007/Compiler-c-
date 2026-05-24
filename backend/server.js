@@ -34,7 +34,7 @@ app.post('/run', (req, res) => {
 
   // 2. Generate unique name for compilation output to avoid file access/lock collisions on Windows
   const uniqueSuffix = `${Date.now()}_${Math.floor(Math.random() * 1000)}`;
-  const exePath = path.join(__dirname, `main_${uniqueSuffix}.exe`);
+  const exePath = path.join(__dirname, `main_${uniqueSuffix}`);
 
   // 3. Compile using g++
   // Wrap paths in quotes to support spaces in directory paths (e.g., "code compiler")
@@ -127,5 +127,5 @@ app.post('/run', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`C++ Compiler Backend is running on http://localhost:${PORT}`);
+  console.log(`C++ Compiler Backend is running on port ${PORT}`);
 });
