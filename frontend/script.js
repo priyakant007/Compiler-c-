@@ -1,7 +1,7 @@
 console.log("C++ Compiler Script starting...");
 
 let codeEditor, customInput, runBtn, clearBtn, terminalOutput, lineNumbers, exitCodeStat;
-let API_URL = 'http://localhost:5000/run';
+let API_URL = 'https://compiler-c.onrender.com';
 
 try {
     codeEditor = document.getElementById('codeEditor');
