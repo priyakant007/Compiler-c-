@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online C++ Compiler</title>
+    <!-- Google Fonts: Inter for UI, Fira Code for code editor -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="brand">
+                <div class="logo-icon">++</div>
+                <div class="logo-text">
+                    <h1>Online C++ Compiler</h1>
+                    <p class="subtitle">Compile and execute C++ code instantly in the cloud</p>
+                </div>
+            </div>
+            <div class="system-status">
+                <span class="status-dot online"></span>
+                <span class="status-text">Server: Online</span>
+            </div>
+        </header>
+
+        <!-- Main Workspace -->
+        <main class="workspace">
+            <!-- Left Workspace: Editor Section -->
+            <section class="editor-section card">
+                <div class="card-header">
+                    <div class="panel-title">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        <span>source.cpp</span>
+                    </div>
+                    <div class="badge">C++17 (GCC)</div>
+                </div>
+                <div class="editor-container">
+                    <!-- Line Numbers container -->
+                    <div class="line-numbers" id="lineNumbers">
+                        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                    </div>
+                    <textarea 
+                        id="codeEditor" 
+                        class="code-textarea" 
+                        spellcheck="false" 
+                        placeholder="// Write your C++ code here..."
+                    >#include <iostream>
+
+using namespace std;
+
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
+}</textarea>
+                </div>
+            </section>
+
+            <!-- Right Workspace: Input/Output Section -->
+            <section class="io-section">
+                <!-- Custom Input Panel -->
+                <div class="input-panel card">
+                    <div class="card-header">
+                        <div class="panel-title">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            <span>Custom Input (stdin)</span>
+                        </div>
+                    </div>
+                    <textarea 
+                        id="customInput" 
+                        class="input-textarea" 
+                        placeholder="Provide standard input data here (optional)..."
+                    ></textarea>
+                </div>
+
+                <!-- Run Control & Output Panel -->
+                <div class="output-panel card">
+                    <div class="card-header actions-header">
+                        <div class="panel-title">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="4 17 10 11 4 5"></polyline>
+                                <line x1="12" y1="19" x2="20" y2="19"></line>
+                            </svg>
+                            <span>Execution Output</span>
+                        </div>
+                        <div class="actions">
+                            <button id="runBtn" class="btn-run">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                                <span>Run Code</span>
+                                <span class="shortcut">Ctrl+Enter</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-container">
+                        <div id="terminalOutput" class="terminal-output placeholder-text">
+Click the "Run Code" button to compile and run your C++ program.
+                        </div>
+                    </div>
+
+                    <div class="terminal-footer">
+                        <div class="stat-item" id="exitCodeStat">
+                            <span class="stat-label">Exit Code:</span>
+                            <span class="stat-val">-</span>
+                        </div>
+                        <div class="stat-item" id="timeStat">
+                            <span class="stat-label">Time Limit:</span>
+                            <span class="stat-val">5.0s</span>
+                        </div>
+                        <button id="clearBtn" class="btn-clear">Clear Console</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Developed with ❤️ using Node.js & Express. Press <kbd>Ctrl</kbd> + <kbd>Enter</kbd> inside the editor to quickly run code.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
