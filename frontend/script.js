@@ -1,7 +1,7 @@
 console.log("C++ Compiler Script starting...");
 
 let codeEditor, customInput, runBtn, clearBtn, terminalOutput, lineNumbers, exitCodeStat;
-let API_URL = 'https://compiler-c.onrender.com';
+let API_URL = 'https://compiler-c.onrender.com/run';
 
 try {
     codeEditor = document.getElementById('codeEditor');
@@ -15,13 +15,7 @@ try {
     if (exitCodeStatContainer) {
         exitCodeStat = exitCodeStatContainer.querySelector('.stat-val');
     }
-
-    // Dynamically match API URL host to current browser host (localhost vs 127.0.0.1)
-    if (window.location.hostname === '127.0.0.1') {
-        API_URL = 'http://127.0.0.1:5000/run';
-    } else if (window.location.hostname) {
-        API_URL = `${window.location.protocol}//${window.location.hostname}:5000/run`;
-    }
+   
     console.log("Resolved API URL to:", API_URL);
 
     // 1. Dynamic Line Numbers
