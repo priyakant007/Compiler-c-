@@ -6,12 +6,12 @@ A premium, modern, and lightweight Online C++ Compiler web application built usi
 
 ## Features
 
-- 🖥️ **Sleek Dark Theme**: Modern glassmorphism UI with smooth animations, glow effects, and typography.
-- 📝 **Interactive Code Panel**: Real-time dynamic line numbering, `Tab` indentation support, and syntax-like layout.
-- ⚙️ **Custom Input (stdin)**: Pass custom arguments and data directly to the C++ program's standard input stream.
-- ⏱️ **Infinite Loop Protection**: Automatic 5-second timeout execution limit to prevent freezing server resources.
-- ⚡ **Developer Convenience**: Run code with the keyboard shortcut `Ctrl + Enter` (or `Cmd + Enter`).
-- 🔗 **Smart Routing**: Dynamic hostname resolution (automatically switches backend API endpoints between `localhost` and `127.0.0.1` based on how the page is loaded).
+-  **Sleek Dark Theme**: Modern glassmorphism UI with smooth animations, glow effects, and typography.
+-  **Interactive Code Panel**: Real-time dynamic line numbering, `Tab` indentation support, and syntax-like layout.
+-  **Custom Input (stdin)**: Pass custom arguments and data directly to the C++ program's standard input stream.
+-  **Infinite Loop Protection**: Automatic 5-second timeout execution limit to prevent freezing server resources.
+-  **Developer Convenience**: Run code with the keyboard shortcut `Ctrl + Enter` (or `Cmd + Enter`).
+-  **Smart Routing**: Dynamic hostname resolution (automatically switches backend API endpoints between `localhost` and `127.0.0.1` based on how the page is loaded).
 
 ---
 
